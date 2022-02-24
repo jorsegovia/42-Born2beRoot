@@ -1,0 +1,44 @@
+Partitions
+	lsblk	-> check partitions
+
+sudo
+	usermod -aG sudo <username>		-> add <username to sudoers>
+	sudo visudo				-> edit sudo file
+	sudo nano /etc/sudoers			-> ditto
+	sudo cat /var/log/sudo/sudo_logs	-> sudo logs
+	sudo cat
+ssh
+	sudo systemctl status ssh	-> ssh service status
+	sudo service sshd status	-> same
+	sudo service ssh restart	-> restart service
+	sudo nano /etc/ssh/sshd_config	-> file to change the ports
+
+UFW
+	sudo ufw status numbered	-> ufw service status
+	sudo ufw status verbose		-> show also the entry ports
+	sudo ufw allow <rule/portnum>	-> configure rules/port numbers
+	sudo ufw delete <rule_num>	-> delete the <rule_num> rule
+	sudo ufw default deny outgoing	-> close all outgoing ports
+
+Passwords
+	sudo nano /etc/pam.d/common-password	-> file with password rules
+	sudo nano /etc/login.defs		-> file with password expiration conf
+	sudo chage -l <username>		-> check password rules for <username>
+
+Groups
+	sudo adduser <username>			-> create user <username>
+	sudo addgroup <groupname>		-> create user group <usergroup>
+	sudo getent group <groupname>		-> check groups
+	sudo cut -d: -f1 /etc/passwd		-> check local users
+	sudo usermod -aG <usergroup> <username>	-> add <username> to group <usergroup>
+	sudo groups				-> check current user groups
+
+Cron
+	sudo nano /usr/local/bin/monitoring.sh	-> monitoring file
+	sudo /usr/local/bin/monitoring.sh	-> execute the file
+	sudo crontab -u root -e			-> open the crontab file
+
+FOR DEFENSE
+	sudo hostnamectl				-> check current hostname
+	sudo hostnamectl set-hostname new_hostname	-> change hostname
+	sudo nano /etc/hosts				-> change host file
