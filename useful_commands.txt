@@ -42,3 +42,6 @@ FOR DEFENSE
 	sudo hostnamectl				-> check current hostname
 	sudo hostnamectl set-hostname new_hostname	-> change hostname
 	sudo nano /etc/hosts				-> change host file
+
+GET SIGNATURE - From outside the VM
+	shasum ~/../../sgoinfre/students/jsegovia/Born2beRoot/Born2beRoot.vdi > signature.txt
