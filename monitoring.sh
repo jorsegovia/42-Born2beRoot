@@ -18,6 +18,7 @@ ulog=$(users | wc -w)
 ip=$(hostname -I)
 mac=$(ip link show | awk '$1 == "link/ether" {print $2}')
 cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l) # journalctl should be running as sudo but the script is running as root so it isn't
+clear
 wall "	#Architecture: $arc
 	#CPU physical: $pcpu
 	#vCPU: $vcpu
