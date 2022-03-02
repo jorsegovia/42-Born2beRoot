@@ -37,6 +37,8 @@ Cron
 	sudo nano /usr/local/bin/monitoring.sh	-> monitoring file
 	sudo /usr/local/bin/monitoring.sh	-> execute the file
 	sudo crontab -u root -e			-> open the crontab file
+	sudo service cron stop			-> stop the cron service
+	sudo service cron start			-> restart the cron service
 
 FOR DEFENSE
 	sudo hostnamectl				-> check current hostname
@@ -44,4 +46,4 @@ FOR DEFENSE
 	sudo nano /etc/hosts				-> change host file
 
 GET SIGNATURE - From outside the VM
-	shasum ~/../../sgoinfre/students/jsegovia/Born2beRoot/Born2beRoot.vdi > signature.txt
+	shasum <filetree>/VM.vdi > signature.txt
