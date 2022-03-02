@@ -5,8 +5,8 @@ sudo
 	usermod -aG sudo <username>		-> add <username to sudoers>
 	sudo visudo				-> edit sudo file
 	sudo nano /etc/sudoers			-> ditto
-	sudo cat /var/log/sudo/sudo_logs	-> sudo logs
-	sudo cat
+	sudo cat /var/log/sudo/sudo_logs	-> sudo sudo_logs
+	
 ssh
 	sudo systemctl status ssh	-> ssh service status
 	sudo service sshd status	-> same
